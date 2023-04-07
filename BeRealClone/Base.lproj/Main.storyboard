@@ -21,10 +21,10 @@
                                 <rect key="frame" x="24" y="90" width="345" height="289.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ak5-zw-7Ga">
-                                        <rect key="frame" x="103.00000000000001" y="0.0" width="139.33333333333337" height="48"/>
+                                        <rect key="frame" x="99.666666666666686" y="0.0" width="146" height="48"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeReal." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzp-lh-QhM">
-                                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="48"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeFake." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzp-lh-QhM">
+                                                <rect key="frame" x="0.0" y="0.0" width="146" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="30" y="692"/>
         </scene>
-        <!--BeReal-->
+        <!--BeFake.-->
         <scene sceneID="fHp-DL-sby">
             <objects>
                 <viewController id="d9m-E0-1kG" customClass="FeedViewController" customModule="BeRealClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,12 +298,12 @@
                             <constraint firstItem="swd-O3-Zdx" firstAttribute="leading" secondItem="qOc-PW-YDb" secondAttribute="leading" id="rop-YV-Qdu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BeReal" id="6BA-zZ-rIB">
+                    <navigationItem key="navigationItem" title="BeFake." id="6BA-zZ-rIB">
                         <barButtonItem key="backBarButtonItem" title=" " id="2hS-8R-dYh"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="SbD-9m-nYT">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <action selector="didTapSignOut:" destination="d9m-E0-1kG" id="QkF-qN-8U6"/>
+                                <action selector="onLogOutTapped:" destination="d9m-E0-1kG" id="4cD-SU-T4F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="m4O-5m-xQ0">
@@ -383,6 +383,12 @@
                                     <action selector="onPickedImageTapped:" destination="gqI-C1-398" id="9dB-Ed-3zM"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="Camera Button" image="camera" catalog="system" id="1aB-Rl-buZ">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="gqI-C1-398" id="pO5-XY-rWL"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -402,6 +408,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
